@@ -51,13 +51,7 @@ class ContactForm extends Component {
     return (
       <>
         <form onSubmit={this.handleSubmit} className={styles.contactForm}>
-          <input
-            type='text'
-            placeholder='Search contacts by name...'
-            value={this.props.filterVal}
-            onChange={this.handleFilterChange}
-          />
-          <label>
+          <label className={styles.inputLabel}>
             Name:
             <input
               type='text'
@@ -66,10 +60,10 @@ class ContactForm extends Component {
               onChange={this.handleChange}
             />
           </label>
-          <label>
+          <label className={styles.inputLabel}>
             Number:
             <input
-              type='number'
+              type='text'
               name='number'
               value={number}
               onChange={this.handleChange}
@@ -77,6 +71,14 @@ class ContactForm extends Component {
           </label>
           <button type='submit'>Add Contact</button>
         </form>
+        <div className={styles.inputWrapper}>
+        <input
+            type='text'
+            placeholder='Search contacts by name...'
+            value={this.props.filterVal}
+            onChange={this.handleFilterChange}
+          />
+          </div>
       </>
     );
   }

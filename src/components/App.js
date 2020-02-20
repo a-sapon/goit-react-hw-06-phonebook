@@ -5,6 +5,7 @@ import ContactsList from './contactsList/ContactsList';
 
 const App = () => (
   <>
+  <h2>Phonebook</h2>
     <ContactForm />
     <ContactsList />
   </>

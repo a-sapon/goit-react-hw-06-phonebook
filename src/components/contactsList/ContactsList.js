@@ -7,8 +7,8 @@ const ContactsList = ({ contacts, searchResult, deleteContact }) =>
     <ul>
       {searchResult.map(({ name, number, id }) => (
         <li key={id}>
-          <h3>{name}: </h3>
-          <span>{number}</span>
+          <p>{name}:</p>
+          <p>{number}</p>
           <button type='button' onClick={() => deleteContact(id)}>
             x
           </button>
@@ -20,8 +20,8 @@ const ContactsList = ({ contacts, searchResult, deleteContact }) =>
       <ul>
         {contacts.map(({ name, number, id }) => (
           <li key={id}>
-            <h3>{name}: </h3>
-            <span>{number}</span>
+            <p>{name}: </p>
+            <p>{number}</p>
             <button type='button' onClick={() => deleteContact(id)}>
               x
             </button>
