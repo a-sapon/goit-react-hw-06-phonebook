@@ -22,7 +22,7 @@ export const reducer = createReducer(
       ...state,
       filter: payload,
       searchResult: state.contacts.filter(item =>
-        item.name.toLowerCase().includes(state.filter.toLowerCase())
+        item.name.toLowerCase().includes(payload.toLowerCase())
       )
     }),
     [Type.CLEAR_FILTER]: state => ({
